@@ -7,7 +7,7 @@ defmodule Salty.Mixfile do
     [
       app: :salty,
       version: "0.1.3",
-      elixir: "~> 1.4",
+      elixir: "~> 1.7",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       compilers: [:elixir_make] ++ Mix.compilers(),
@@ -27,15 +27,14 @@ defmodule Salty.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.14", only: :dev},
-      {:elixir_make, "~> 0.4", runtime: false}
+      {:ex_doc, "~> 0.19.3", only: :dev},
+      {:elixir_make, "~> 0.5.2", runtime: false}
     ]
   end
 
   defp description do
     """
-    An Elixir wrapper around the libsodium cryptographic library.
-    Based on erlang-nif.
+      An Elixir api for libsodium cryptographic library
     """
   end
 

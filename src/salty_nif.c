@@ -105,8 +105,8 @@
     }
 
 #define SALTY_EXPORT_NAME(name) #name
-#define SALTY_EXPORT_CONS(name, args) { SALTY_EXPORT_NAME(name), args, salty_##name }
-#define SALTY_EXPORT_FUNC(name, args) { SALTY_EXPORT_NAME(name), args, salty_##name }
+#define SALTY_EXPORT_CONS(name, args) { SALTY_EXPORT_NAME(name), args, salty_##name, 0}
+#define SALTY_EXPORT_FUNC(name, args) { SALTY_EXPORT_NAME(name), args, salty_##name, 0}
 #define SALTY_EXPORT_FUNC_DIRTY(name, args) { SALTY_EXPORT_NAME(name), args, salty_##name, ERL_NIF_DIRTY_JOB_CPU_BOUND }
 
 #define SALTY_CALL_SIMPLE(call)                                                 \

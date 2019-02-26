@@ -11,7 +11,7 @@ endif
 ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR)
 ERL_LDFLAGS ?= -L$(ERL_EI_LIBDIR)
 
-CFLAGS ?= -O2 -Wall -Wextra
+CFLAGS ?= -O2 -Wall
 LDFLAGS += -fPIC -shared -lsodium -lei -lerl_interface
 
 ifeq ($(CROSSCOMPILE),)
